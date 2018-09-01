@@ -1,0 +1,46 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>solar</title>
+		<style>
+			body{
+				background-color:#004;
+			}
+			#sun{
+				position:absolute;
+				left:40%;
+				top:30%;
+				width:20%;
+				height:40%;
+				border-radius:50%;
+				background-color:#f90;
+				z-index:1;
+			}
+			#earth{
+				position:absolute;
+				width:6%;
+				height:12%;
+				border-radius:50%;
+				background-color:#36c;
+				animation: xmotion 8s cubic-bezier(0.368,0,0.632,1) 0s infinite, ymotion 8s cubic-bezier(0.368,0,0.632,1) -2s infinite;
+			}
+			@keyframes xmotion {
+				0%   {left:27%;z-index:2;}
+				49.9%{z-index:2;}
+				50%  {left:67%;z-index:0;}
+				100% {left:27%;z-index:0;}
+			}
+			@keyframes ymotion {
+				0%   {top:32%;}
+				50%  {top:56%;}
+				100% {top:32%;}
+			}
+		</style>
+	</head>
+	<body>
+		<div style='position:absolute;width:80vw;left:10vw;top:0;height:40vw;'>
+			<div id='sun'></div>
+			<div id='earth'></div>
+		</div>
+	</body>
+</html>
